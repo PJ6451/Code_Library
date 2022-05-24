@@ -96,4 +96,22 @@ def isValid(s: str) -> bool:
             return False
     return len(stack) == 0
 
-a = isValid("()}")
+def longestCommonPrefix(self, strs: list[str]) -> str:
+    if not strs:
+        return ""
+    shortest = min(strs,key=len)
+    for i, ch in enumerate(shortest):
+        for other in strs:
+            if other[i] != ch:
+                return shortest[:i]
+    return shortest 
+
+def removeDuplicates(nums: list[int]) -> int:
+	dup = 0
+	for i in range(1, len(nums)):
+		if nums[i] == nums[i - 1]:
+			dup += 1
+		else:
+			nums[i - dup] = nums[i]
+
+	return len(nums) - dup
