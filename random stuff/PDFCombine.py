@@ -1,11 +1,11 @@
-from PyPDF2 import PdfFileMerfger
+from PyPDF2 import PdfWriter
 from os import walk
 
-mypath = r''
+mypath = r'C:\Users\16617\Downloads\merge'
 
 _, _, pdfs = next(walk(mypath))
 
-merger = PdfFileMerfger
+merger = PdfWriter()
 
 for pdf in pdfs:
     merger.append(mypath + '\\' + pdf)
