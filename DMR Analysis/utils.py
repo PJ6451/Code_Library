@@ -13,7 +13,6 @@ def get_cols_to_keep():
         "Opt_City",
         "Owner",
         "PriProduct",
-        "Other_Prod",
         "Opt_Type",
         "FaceAmount",
     ]
